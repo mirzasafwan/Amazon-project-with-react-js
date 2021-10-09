@@ -1,0 +1,29 @@
+.Home{
+    display: flex;
+    justify-content: center;
+    max-width: 2350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Home__Box{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Home__container{
+    display: flex;
+    z-index: -1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.Home__img{
+    width: 100%;
+    object-fit: contain;
+    z-index: -1;
+    margin-bottom: -360px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%);
+}
