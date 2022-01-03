@@ -2,6 +2,7 @@ import { act } from "react-dom/test-utils";
 
 export const initialState={
     cart:[],
+    user:null,
 };
 
 export const getCartTotal=(cart)=>
@@ -16,9 +17,26 @@ const reducer=(state,action)=>{
     };
 
     case "Remove_From_Cart":
-        return{...state,
-            cart:state.cart.filter(item=>item.id!=action.id)
-        }
+        case "REMOVE_FROM_CART":
+            const index = state.cart.findIndex((cartItem) => cartItem.id === action.id);
+
+            let newCart = [...state.cart];
+
+            if(index >=0)
+            {
+                newCart.splice(index,1);
+            } else{
+                console.warn('Cant remove, as cart is Empty')
+            }
+            return{
+                ...state,
+                cart: newCart
+            }
+            case "SET_USER":
+                return{
+                    ...state,
+                    user:action.user
+                }
     default:
         return state;
     }

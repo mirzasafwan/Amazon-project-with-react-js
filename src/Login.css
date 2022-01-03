@@ -1,0 +1,61 @@
+.login{
+    width:100%;    
+    display:flex;
+    align-items:center;
+    top:0;
+    height:100vh;
+    flex-direction:column;
+}
+.login__logo{
+    width:100px;
+    margin-right:auto;
+    margin-left: auto;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.login__container{
+    width:350px;
+    height:fit-content;
+    display: flex;
+    flex-direction:column;
+    border:1px solid lightgray;
+    border-radius: 5px;
+    padding:20px 30px 60px 30px;
+    background-color:white;
+}
+.login__container h1{
+    font-weight: 350;
+    margin-bottom:15px;
+}
+.login__container h5{
+    margin-top:5px;
+    margin-bottom:0px;
+    font-weight: 50 0;
+}
+.login__container input{
+    margin-top:5px;
+    margin-bottom: 1px;
+    height: 25px;
+    width:96%;
+}
+
+.Sign__bton{
+    background-color: #f0c14b;
+    border-radius:2px;
+    width:99%;
+    margin-top: 10px;
+    height:32px;
+    margin-bottom: 5px;
+    border:none;
+}
+
+.Reg__bton{
+    background-color: #f0c14b;
+    border-radius:2px;
+    width:99%;
+    margin-top: 10px;
+    height:32px;
+    margin-bottom: 5px;   
+    border:none;
+}

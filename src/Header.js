@@ -6,7 +6,7 @@ import RoomRoundedIcon from "@mui/icons-material/RoomRounded";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 function Header() {
-  const [{cart},dispatch]=useStateValue();
+  const [{cart,user},dispatch]=useStateValue();
   return (
     <div className="header">
       <Link to="/">
@@ -53,11 +53,12 @@ function Header() {
       </div>
 
       <div className="header__nav">
+        <Link to ='/login'>
         <div className="header__option">
           <span className="header__option1"> Hello </span>
-          <span className="header__option2"> Sign In </span>
+          <span className="header__option2"> {user ? 'Sign In':'Sign Out'} </span>
         </div>
-
+        </Link>
         <div className="header__option">
           <span className="header__option1"> Return</span>
           <span className="header__option2"> Order </span>
