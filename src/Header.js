@@ -1,3 +1,4 @@
+import {auth} from "./firebase";
 import React from "react";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
@@ -7,14 +8,18 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 function Header() {
   const [{cart,user},dispatch]=useStateValue();
+
+  const handleAuthentication=()=>{
+    if(user){
+      auth.signOut();
+    }
+  }
   return (
     <div className="header">
       <Link to="/">
         <img
           className="header__logo"
-          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-          alt=" Failed "
-        />
+          src="https://mir-s3-cdn-cf.behance.net/projects/404/742b5a63383347.Y3JvcCwyMTM2LDE2NzIsMzYsMA.jpg"alt="Failed"/>
       </Link>
       <div className="header__nav">
         <div className="location">
@@ -53,10 +58,10 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to ='/login'>
-        <div className="header__option">
-          <span className="header__option1"> Hello </span>
-          <span className="header__option2"> {user ? 'Sign In':'Sign Out'} </span>
+        <Link to ={!user &&'/login'}>
+        <div onClick={handleAuthentication} className="header__option">
+          <span className="header__option1"> Hello,{user?.email} </span>
+          <span className="header__option2"> {user ? 'Sign Out':'Sign In'} </span>
         </div>
         </Link>
         <div className="header__option">
@@ -71,7 +76,7 @@ function Header() {
         <Link to="/checkout">
           <div className="header__Cart">
             <ShoppingCartIcon />
-            <span className="header__option2 header__Zero">{cart.length}</span>
+            <span className="header__option2 header__Zero">{cart?.length}</span>
           </div>
         </Link>
       </div>

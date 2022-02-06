@@ -10,10 +10,12 @@
 
 .Checkout_info button{
     background: #F7CA00;
-    border: 1px solid;
+    border: 0px solid;
     border-color: #9b8212;
     margin-top: 10px;
+    border-radius: 4px;
     color: black;
+    padding: 6px;
 }
 
 .Checkout_img{
@@ -25,4 +27,35 @@
 .Checkout_title{
     font-size: 18px;
     font-weight: 700;
+}
+.Checkout_info button:active {
+    box-shadow:7px 6px 28px 1px rgba(5, 9, 235, 0.911);
+    transform: translateY(4px);
+}
+
+@media  screen and (max-width:720px) {
+    .Checkout_product {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+ }
+ .Checkout_title {
+    font-size: 8px;
+    font-weight: 500;
+}
+.Checkout_img {
+    object-fit: contain;
+    width: 100px;
+    height: 155px;
+}
+.Checkout_info button {
+    font-size: 9px;
+    background: #F7CA00;
+    border: 0px solid;
+    border-color: #9b8212;
+    margin-top: 5px;
+    border-radius: 1px;
+    color: black;
+    padding: 2px;
+}
 }

@@ -15,3 +15,12 @@
 .checkout__right{
     background-color:aqua;
 }
+
+@media  screen and (max-width:720px) {
+    .checkout__right{
+        width:50%;
+    }
+    .checkout__left{
+        width:50%;
+    }
+ }
