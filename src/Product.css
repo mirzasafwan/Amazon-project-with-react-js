@@ -50,3 +50,11 @@
     box-shadow:7px 6px 28px 1px rgba(0, 0, 0, 0.24);
     transform: translate(1px,1px);
 }
+
+
+@media screen and (max-width:720px) {
+.product__image, .product__info {
+        object-fit: contain;
+        margin-bottom: 2px;
+    }
+}

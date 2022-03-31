@@ -80,12 +80,18 @@
 @media screen and (max-width:720px ){
     .header {
         display:flex;
-        flex-direction: row;
-        object-fit:cover;
         width:100%;
+        
+    }
+    .header .header__logo {
+        width: 46px;
+        margin: 4px 2px;
+        object-fit: contain;
+        margin-top: 18px;
+        padding-bottom: 12px;
     }
     .listItem{
-        width: 70%;    
+        width: 50%;    
     }
     .header__nav{
         display:flex;
@@ -98,6 +104,16 @@
         
     }
     .header__option2{
-        font-size:8px;
+        font-size:8px;    
     }
+
 }
+@media  screen and (max-width:371px) {
+    .header {
+        display:flex;
+        width:50%;
+        flex-wrap: nowrap;
+    }
+
+}
+    

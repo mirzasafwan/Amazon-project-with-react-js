@@ -17,10 +17,13 @@
 }
 
 @media  screen and (max-width:720px) {
-    .checkout__right{
-        width:50%;
-    }
+        .checkout__right {
+            width: 50%;
+            height: 16vh;
+        }
+    
     .checkout__left{
         width:50%;
     }
  }
+

@@ -27,8 +27,15 @@
     border-radius: 6px;
 }
 @media screen and (max-width:720px) {
+    .subtotal__gift {
+        display: flex;
+        align-items: center;
+        padding-bottom: 4px;
+    }
     .subtotal {
-        width:70%;
-
+        width: 74%;
+        height: 50%;
+        font-size: 12px;
+        padding: 10px;
     }  
 }
